@@ -6,4 +6,4 @@
   
 */
 // MARK: LoginRegister
-"login" = "Είσοδος";
+"login_message" = "Είσοδος";

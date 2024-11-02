@@ -1,0 +1,6 @@
+framework module Pods_E_IdentityTests {
+  umbrella header "Pods-E-IdentityTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
