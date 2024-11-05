@@ -37,3 +37,19 @@ struct LightBlueButtonStyle: ButtonStyle {
             .cornerRadius(cornerRadius)
     }
 }
+
+struct CardStyleButton: ButtonStyle {
+    var width: CGFloat = 180
+    var height: CGFloat = 70
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: width, height: height)
+            .foregroundStyle(.black)
+            .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.lightBlueButtonColor)
+                .shadow(color: .gray, radius: 2, x: 0, y: 2))
+    }
+    
+}

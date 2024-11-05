@@ -16,30 +16,32 @@ struct LoginRegisterController: View {
                 VStack{
                     Spacer(minLength: 150)
                     VStack{
-                        Text("wolcome_message".localized)
-                        Image("android studio")
+                        Text("welcome_message".localized)
+                        Image("logo")
                             .resizable()
-                            .frame(width: 100)
+                            .frame(width: 80, height: 100)
                         Text("e-Identity")
                             .bold()
                             .font(.title)
                     }
-                    Spacer(minLength: 100)
-                    Button {
-                        // To Do set action when login
-                    } label: {
-                        Text("login_message".localized)
+                    Spacer()
+                    VStack(spacing: 30){
+                        Button {
+                            // To Do set action when login
+                        } label: {
+                            Text("login_message".localized)
+                        }
+                        .buttonStyle(DarkBlueButtonStyle())
+                        NavigationLink(destination: RegisterController()) {
+                            Text("register_message".localized)
+                        }
+                        .buttonStyle(LightBlueButtonStyle())
                     }
-                    .buttonStyle(DarkBlueButtonStyle())
-                    Spacer(minLength: 30)
-                    NavigationLink(destination: RegisterController()) {
-                        Text("register_message".localized)
-                    }
-                    .buttonStyle(LightBlueButtonStyle())
                     Spacer(minLength: 100)
-                    Image("android studio")
+                    Image("espa_banner")
                         .resizable()
-                        .frame(width: 200)
+                        .frame(height: 70)
+                        .padding(.bottom).padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
                 }
             }
             .ignoresSafeArea()

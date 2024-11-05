@@ -23,10 +23,10 @@ struct RegisterController: View {
             ScrollView(showsIndicators: false){
                 Spacer(minLength: 100)
                 VStack{
-                    Image("android studio")
+                    Image("logo")
                         .resizable()
-                        .frame(width: 150)
-                    Text(LocalizedStringKey("register_message"))
+                        .frame(width: 80, height: 100)
+                    Text("register_message".localized)
                         .font(.title)
                     OutlinedTextField(text: $name, placeholder: "name".localized)
                         .padding(.all)
@@ -46,7 +46,7 @@ struct RegisterController: View {
                     Button {
                         //To Do validation for regester
                     } label: {
-                        Text("register".localized.uppercased())
+                        Text("register_message".localized.uppercased())
                     }
                     .buttonStyle(DarkBlueButtonStyle())
                 }

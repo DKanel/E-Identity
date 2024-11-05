@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    static let mainBackgroundColor = Color(red: 243/255, green: 247/255, blue: 251/255)
-    static let darkBlueButtonColor = Color(red: 44/255, green: 77/255, blue: 113/255)
-    static let lightBlueButtonColor = Color(red: 138/255, green: 170/255, blue: 191/255)
+    static let mainBackgroundColor = Color(red: 230/255, green: 238/255, blue: 242/255)
+    static let darkBlueButtonColor = Color(red: 32/255, green: 90/255, blue: 126/255)
+    static let lightBlueButtonColor = Color(red: 144/255, green: 181/255, blue: 200/255)
 }

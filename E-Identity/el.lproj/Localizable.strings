@@ -6,4 +6,9 @@
   
 */
 // MARK: LoginRegister
+"welcome_message" = "Καλώς ήρθατε";
 "login_message" = "Είσοδος";
+"register_message" = "Εγγραφή";
+
+// MARK: SelectValidatio
+"select_validation_message" = "Επιλογή ταυτοποίησης";
