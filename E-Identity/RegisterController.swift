@@ -43,10 +43,9 @@ struct RegisterController: View {
                     OutlinedTextField(text: $validPassword, placeholder: "valid_password".localized)
                         .padding(.all)
                         .frame(width: 300)
-                    Button {
-                        //To Do validation for regester
-                    } label: {
-                        Text("register_message".localized.uppercased())
+                    NavigationLink(destination: CheckEmailController()) {
+                        Text("register_message".localized)
+                            .textCase(.uppercase)
                     }
                     .buttonStyle(DarkBlueButtonStyle())
                 }

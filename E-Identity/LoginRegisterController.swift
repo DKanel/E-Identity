@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct LoginRegisterController: View {
-    @State private var showFullScreen = false
+    @State var path: [String] = []
+    @State var loginType = 1
+    @State var loginEmail = "kanel@hotmail.com"
+    @State var isVisible = false
     var body: some View {
         NavigationView{
             ZStack{
@@ -17,6 +20,7 @@ struct LoginRegisterController: View {
                     Spacer(minLength: 150)
                     VStack{
                         Text("welcome_message".localized)
+                            .font(.title)
                         Image("logo")
                             .resizable()
                             .frame(width: 80, height: 100)
@@ -26,14 +30,15 @@ struct LoginRegisterController: View {
                     }
                     Spacer()
                     VStack(spacing: 30){
-                        Button {
-                            // To Do set action when login
-                        } label: {
+                        NavigationLink(destination: LoginController(loginType: $loginType, email: $loginEmail, isVisible: $isVisible)) {
                             Text("login_message".localized)
+                                .textCase(.uppercase)
                         }
                         .buttonStyle(DarkBlueButtonStyle())
                         NavigationLink(destination: RegisterController()) {
                             Text("register_message".localized)
+                                .foregroundStyle(.black)
+                                .textCase(.uppercase)
                         }
                         .buttonStyle(LightBlueButtonStyle())
                     }

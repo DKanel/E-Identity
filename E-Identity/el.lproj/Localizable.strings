@@ -7,8 +7,14 @@
 */
 // MARK: LoginRegister
 "welcome_message" = "Καλώς ήρθατε";
-"login_message" = "Είσοδος";
+"login_message" = "Συνδεση";
 "register_message" = "Εγγραφή";
 
-// MARK: SelectValidatio
+// MARK: Login
+"next" = "επομενο";
+
+// MARK: SelectValidation
 "select_validation_message" = "Επιλογή ταυτοποίησης";
+
+//MARK: CheckEmail
+"check_email_message" = "Σας έχουμε στείλει ένα email για την επιβεβαίωση του λογαριασμού σας";

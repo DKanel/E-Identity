@@ -31,7 +31,7 @@ struct LightBlueButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: width)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding()
             .background(Color.lightBlueButtonColor)
             .cornerRadius(cornerRadius)
