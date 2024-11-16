@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SelectValidationController: View {
+    let isImagesVisible = false
     let arrayOfValidationTypes: [String] = ["E1", "Δίπλωμα οδήγησης", "Διαβατήριο", "Ταυτότητα"]
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
             VStack(spacing: 100){
-                VStack{
+                VStack(spacing: 30){
                     Image("logo")
                         .resizable()
                         .frame(width: 80, height: 100)
@@ -30,9 +31,11 @@ struct SelectValidationController: View {
                                     .frame(minWidth: 80, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                                     .multilineTextAlignment(.center)
                                     .font(.custom("", size: 14))
-                                HStack{
-                                    Image("tick")
-                                    Image("bin")
+                                if isImagesVisible{
+                                    HStack{
+                                        Image("tick")
+                                        Image("bin")
+                                    }
                                 }
                             }
                             .padding(.horizontal)
@@ -42,7 +45,10 @@ struct SelectValidationController: View {
                     }
                 }
                 VStack{
-                    Text("change_info")
+                    Text("change_info".localized)
+                        .fontWeight(.light)
+                        .underline()
+                        
                 }
             }
         }

@@ -10,11 +10,30 @@
 "login_message" = "Συνδεση";
 "register_message" = "Εγγραφή";
 
+// MARK: Register
+"name" = "Όνομα";
+"surname" = "Επίθετο";
+"password" = "Κωδικός";
+"valid_password" = "Επιβεβαιωση κωδικού";
+"empty_message" = "Κενό πεδίο";
+"wrong_type" = "Λανθασμένος τύπος";
+"wrong_password_type" = "Ο κωδικός πρέπει να είναι μεγαλύτερος από 6 ψηφία";
+
 // MARK: Login
 "next" = "επομενο";
+"forgot_password" = "Ξέχασα τον κωδικό";
+"new_user_message" = "Καινούργιος χρήστης?";
+"clickable_new_user_message" = "Εγγραφή";
+
+// MARK: ChooseLoginType
+"choose_login_type_message" = "Επιλέξτε τρόπο για να εισέλθετε";
+"login_with_face_message" = "Είσοδος με πρόσωπο";
+"login_with_email_message" = "Είσοδος με email";
+"login_with_hand_message" = "Είσοδος με παλάμη";
 
 // MARK: SelectValidation
 "select_validation_message" = "Επιλογή ταυτοποίησης";
+"change_info" = "Αλλαγή Στοιχείων";
 
 //MARK: CheckEmail
 "check_email_message" = "Σας έχουμε στείλει ένα email για την επιβεβαίωση του λογαριασμού σας";

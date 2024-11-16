@@ -12,49 +12,72 @@ struct ChooseLoginTypeController: View {
         ZStack{
             Color.mainBackgroundColor
             VStack{
+                Spacer()
                 VStack{
                     Image("logo")
                         .resizable()
                         .frame(width: 80, height: 100)
                     Text("login_message".localized)
-                        .bold()
                         .font(.title)
+                    Spacer()
+                        .frame(height: 10)
                     Text("choose_login_type_message".localized)
                         .fontWeight(.light)
                 }
-                VStack{
+                Spacer()
+                VStack(spacing: 60){
                     HStack{
-                        Image("logo")
+                        Image("Happy")
                             .resizable()
-                            .frame(width: 80, height: 100)
+                            .frame(width: 50, height: 50)
                         NavigationLink {
                             
                         } label: {
-                            Text("Click me")
+                            Text("login_with_face_message".localized)
                         }
+                        .frame(width: 200, height: 30)
+                        .padding()
+                        .overlay(
+                            Rectangle()
+                                .stroke(Color.black, lineWidth: 1))
 
                     }
                     HStack{
-                        Image("logo")
+                        Image("At sign")
                             .resizable()
-                            .frame(width: 80, height: 100)
+                            .frame(width: 50, height: 50)
                         NavigationLink {
                             
                         } label: {
-                            Text("Click me")
+                            Text("login_with_email_message".localized)
                         }
+                        .frame(width: 200, height: 30)
+                        .padding()
+                        .overlay(
+                            Rectangle()
+                                .stroke(Color.black, lineWidth: 1))
                     }
                     HStack{
-                        Image("logo")
+                        Image("Hand")
                             .resizable()
-                            .frame(width: 80, height: 100)
+                            .frame(width: 50, height: 50)
                         NavigationLink {
                             
                         } label: {
-                            Text("Click me")
+                            Text("login_with_hand_message".localized)
                         }
+                        .frame(width: 200, height: 30)
+                        .padding()
+                        .overlay(
+                            Rectangle()
+                                .stroke(Color.black, lineWidth: 1))
                     }
                 }
+                Spacer()
+                Image("espa_banner")
+                    .resizable()
+                    .frame(height: 70)
+                    .padding(.bottom).padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
             }
         }
         .ignoresSafeArea()

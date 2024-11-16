@@ -9,8 +9,9 @@ import SwiftUI
 
 struct LoginController: View {
     @Binding var loginType: Int
-    @Binding var email: String
+    @Binding var email: String?
     @Binding var isVisible: Bool
+    @State var error: String? 
     @State var buttonLabel = "next"
     var body: some View {
         ZStack{
@@ -20,12 +21,12 @@ struct LoginController: View {
                     .resizable()
                     .frame(width: 80, height: 100)
                 VStack{
-                    OutlinedTextField(text: $email, image: UIImage(systemName: "envelope"), placeholder: "email".localized, isEditable: false)
+                    OutlinedTextField(text: $email, image: UIImage(systemName: "envelope"), error: $error, placeholder: "email".localized, isEditable: false)
                         .padding(.all)
                         .frame(width: 300,height: 100)
                     if isVisible{
                         VStack(alignment:.leading){
-                            OutlinedTextField(text: $email, image: UIImage(systemName: "lock"),trailingImage: UIImage(systemName: "eye.fill"), placeholder: "password".localized)
+                            OutlinedTextField(text: $email, image: UIImage(systemName: "lock"),trailingImage: UIImage(systemName: "eye.fill"), error: $error, placeholder: "password".localized)
                                 .padding(.all)
                                 .frame(width: 300,height: 100)
                             Text("forgot_password".localized)
@@ -41,6 +42,8 @@ struct LoginController: View {
                             .textCase(.uppercase)
                     }
                     .buttonStyle(DarkBlueButtonStyle())
+                    Spacer()
+                        .frame(height: 20)
                     HStack{
                         Text("new_user_message".localized)
                             .fontWeight(.light)

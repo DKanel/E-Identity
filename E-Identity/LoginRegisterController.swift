@@ -10,8 +10,8 @@ import SwiftUI
 struct LoginRegisterController: View {
     @State var path: [String] = []
     @State var loginType = 1
-    @State var loginEmail = "kanel@hotmail.com"
-    @State var isVisible = false
+    @State var loginEmail: String? = "kanel@hotmail.com"
+    @State var isVisible = true
     var body: some View {
         NavigationView{
             ZStack{

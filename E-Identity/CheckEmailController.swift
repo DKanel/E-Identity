@@ -30,7 +30,6 @@ struct CheckEmailController: View {
                     .frame(height: 200)
                 Button {
                     // To Do set action when login
-                    
                     dismiss()
                 } label: {
                     Text("login_message".localized)
