@@ -75,6 +75,8 @@ struct RegisterController: View {
                         }
                         
                         if triggerNumber == 4{
+                            let api = APIClient()
+                            api.register(name: (name?.uppercased())!, surname: (surname?.uppercased())!, email: email!, password: password!, token: Constants().token)
                             isPresenting = true
                         }
                     } label: {

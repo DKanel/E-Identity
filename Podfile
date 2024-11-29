@@ -10,6 +10,7 @@ target 'E-Identity' do
 	pod 'MaterialComponents/TextControls+FilledTextFields'
 	pod 'MaterialComponents/TextControls+OutlinedTextAreas'
 	pod 'MaterialComponents/TextControls+OutlinedTextFields'
+	pod 'Alamofire'
 
   target 'E-IdentityTests' do
     inherit! :search_paths
