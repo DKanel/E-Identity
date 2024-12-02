@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChooseLoginTypeController: View {
+    @State var isVisible: Bool = true
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
@@ -34,8 +35,9 @@ struct ChooseLoginTypeController: View {
                             
                         } label: {
                             Text("login_with_face_message".localized)
+                                .foregroundStyle(.black)
                         }
-                        .frame(width: 200, height: 30)
+                        .frame(width: 200, height: 10)
                         .padding()
                         .overlay(
                             Rectangle()
@@ -47,11 +49,12 @@ struct ChooseLoginTypeController: View {
                             .resizable()
                             .frame(width: 50, height: 50)
                         NavigationLink {
-                            
+                            LoginController(isVisible: $isVisible)
                         } label: {
                             Text("login_with_email_message".localized)
+                                .foregroundStyle(.black)
                         }
-                        .frame(width: 200, height: 30)
+                        .frame(width: 200, height: 10)
                         .padding()
                         .overlay(
                             Rectangle()
@@ -65,8 +68,9 @@ struct ChooseLoginTypeController: View {
                             
                         } label: {
                             Text("login_with_hand_message".localized)
+                                .foregroundStyle(.black)
                         }
-                        .frame(width: 200, height: 30)
+                        .frame(width: 200, height: 10)
                         .padding()
                         .overlay(
                             Rectangle()

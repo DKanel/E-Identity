@@ -30,7 +30,7 @@ struct LoginRegisterController: View {
                     }
                     Spacer()
                     VStack(spacing: 30){
-                        NavigationLink(destination: LoginController(loginType: $loginType, email: $loginEmail, isVisible: $isVisible)) {
+                        NavigationLink(destination: ChooseLoginTypeController()) {
                             Text("login_message".localized)
                                 .textCase(.uppercase)
                         }

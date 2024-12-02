@@ -18,6 +18,7 @@
 "empty_message" = "Κενό πεδίο";
 "wrong_type" = "Λανθασμένος τύπος";
 "wrong_password_type" = "Ο κωδικός πρέπει να είναι μεγαλύτερος από 6 ψηφία";
+"not_Greek" = "Πρέπει να είναι ελληνικά";
 
 // MARK: Login
 "next" = "επομενο";
@@ -37,3 +38,6 @@
 
 //MARK: CheckEmail
 "check_email_message" = "Σας έχουμε στείλει ένα email για την επιβεβαίωση του λογαριασμού σας";
+
+//MARK: LicenceHelperController
+"drivers_licence_helper" = "Τοποθετήστε το δίπλωμα μέσα στο κενό από το γκρι πλαίσιο";

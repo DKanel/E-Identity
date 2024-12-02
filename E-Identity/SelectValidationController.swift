@@ -10,6 +10,7 @@ import SwiftUI
 struct SelectValidationController: View {
     let isImagesVisible = false
     let arrayOfValidationTypes: [String] = ["E1", "Δίπλωμα οδήγησης", "Διαβατήριο", "Ταυτότητα"]
+    @State var isDrivingLicenceSelected: Bool = false
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
@@ -24,7 +25,19 @@ struct SelectValidationController: View {
                 VStack(spacing: 20){
                     ForEach(arrayOfValidationTypes, id: \.self){ validationType in
                         Button {
-                            
+                            switch validationType{
+                            case "Δίπλωμα οδήγησης":
+                                print("driving licence pressed")
+                                isDrivingLicenceSelected = true
+                            case "E1":
+                                print("E1 pressed")
+                            case "Διαβατήριο":
+                                print("Passaport pressed")
+                            case "Ταυτότητα":
+                                print("ID pressed")
+                            default:
+                                print("default pressed")
+                            }
                         } label: {
                             HStack{
                                 Text(validationType)
@@ -53,6 +66,10 @@ struct SelectValidationController: View {
             }
         }
         .ignoresSafeArea()
+        .fullScreenCover(isPresented: $isDrivingLicenceSelected, onDismiss: {
+        }, content: {
+            LicenceHelperController()
+        })
     }
 }
 

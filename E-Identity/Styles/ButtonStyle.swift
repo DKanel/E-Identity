@@ -22,6 +22,19 @@ struct DarkBlueButtonStyle: ButtonStyle {
             .cornerRadius(cornerRadius)
     }
 }
+struct DarkBlueButtonStyleSmall: ButtonStyle {
+    var cornerRadius: CGFloat = 12
+    var width: CGFloat = 100
+    var height: CGFloat = 50
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: width, height: height)
+            .foregroundColor(.white)
+            .background(Color.darkBlueButtonColor)
+            .cornerRadius(cornerRadius)
+    }
+}
 
 struct LightBlueButtonStyle: ButtonStyle {
     var cornerRadius: CGFloat = 12

@@ -24,18 +24,45 @@ struct GenericResponse: Decodable {
 
 
 // Model for the error object
-struct ErrorDetail: Codable {
-    let message: String
-    let type: String
-}
-
-// Main model for the response
-struct APIResponse: Codable {
+struct ErrorResponse: Codable {
     let error: ErrorDetail
+    let errorCode: Int
     let status: String
 
+    struct ErrorDetail: Codable {
+        let message: String
+        let type: String
+    }
+}
+
+struct LoginResponseModel: Codable {
+    let loginToken: String
+    let registrationStatus: String
+    let status: String
+    
     enum CodingKeys: String, CodingKey {
-        case error
+        case loginToken = "loginToken"
+        case registrationStatus = "registration_status"
         case status
+    }
+}
+
+enum LoginError: Error {
+    case invalidResponse
+    case missingFields
+    case parsingError
+    case custom(message: String)
+    
+    var localizedDescription: String {
+        switch self {
+        case .invalidResponse:
+            return "Invalid response from server."
+        case .missingFields:
+            return "Required fields are missing in the response."
+        case .parsingError:
+            return "Failed to parse the response."
+        case .custom(let message):
+            return message
+        }
     }
 }

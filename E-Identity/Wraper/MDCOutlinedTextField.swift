@@ -29,6 +29,7 @@ struct OutlinedTextField: UIViewRepresentable {
         textField.trailingView?.tintColor = .black
         textField.trailingViewMode = .always
         textField.leadingAssistiveLabel.text = error
+        textField.autocapitalizationType = .none
         if (textField.leadingAssistiveLabel.text != nil){
             textField.setNormalLabelColor(.red, for: .normal)
             textField.setNormalLabelColor(.red, for: .editing)
@@ -39,6 +40,7 @@ struct OutlinedTextField: UIViewRepresentable {
             textField.setLeadingAssistiveLabelColor(.red, for: .normal)
             textField.setLeadingAssistiveLabelColor(.red, for: .editing)
             textField.trailingView?.tintColor = .red
+            textField.autocapitalizationType = .none
         }
        
         textField.isUserInteractionEnabled = isEditable ?? true
@@ -57,7 +59,7 @@ struct OutlinedTextField: UIViewRepresentable {
             uiView.setOutlineColor(.red, for: .editing)
             uiView.setLeadingAssistiveLabelColor(.red, for: .normal)
             uiView.setLeadingAssistiveLabelColor(.red, for: .editing)
-            uiView.trailingView?.tintColor = .red
+//            uiView.trailingView?.tintColor = .red  
         }else{
             uiView.setNormalLabelColor(.black, for: .normal)
             uiView.setNormalLabelColor(.black, for: .editing)

@@ -24,7 +24,7 @@ struct RegisterController: View {
     @State var passwordError: String?
     @State var validPasswordError: String?
     @State var isPresenting: Bool = false
-    let viewModel = RegisterViewModel()
+    let viewModel = GenericViewModel()
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
@@ -70,10 +70,17 @@ struct RegisterController: View {
                                     emailError = "wrong_type".localized
                                     triggerNumber = 0
                                 }
+                                if !viewModel.isEntirelyGreek(name){
+                                    nameError = "not_Greek".localized
+                                    triggerNumber = 0
+                                }
+                                if !viewModel.isEntirelyGreek(surname){
+                                    surnameError = "not_Greek".localized
+                                    triggerNumber = 0
+                                }
                                 
                             }
                         }
-                        
                         if triggerNumber == 4{
                             let api = APIClient()
                             api.register(name: (name?.uppercased())!, surname: (surname?.uppercased())!, email: email!, password: password!, token: Constants().token)
