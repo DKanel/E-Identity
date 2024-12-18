@@ -11,6 +11,7 @@ struct SelectValidationController: View {
     let isImagesVisible = false
     let arrayOfValidationTypes: [String] = ["E1", "Δίπλωμα οδήγησης", "Διαβατήριο", "Ταυτότητα"]
     @State var isDrivingLicenceSelected: Bool = false
+    @State var isPassport: Bool = false
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
@@ -33,6 +34,7 @@ struct SelectValidationController: View {
                                 print("E1 pressed")
                             case "Διαβατήριο":
                                 print("Passaport pressed")
+                                isPassport = true
                             case "Ταυτότητα":
                                 print("ID pressed")
                             default:
@@ -65,10 +67,19 @@ struct SelectValidationController: View {
                 }
             }
         }
+        .onAppear(){
+            let api = APIClient()
+            let loginToken = UserDefaults.standard.value(forKey: "LOGINTOKEN") as! String
+            api.getUserDetails(token: Constants().token, loginToken: loginToken)
+        }
         .ignoresSafeArea()
         .fullScreenCover(isPresented: $isDrivingLicenceSelected, onDismiss: {
         }, content: {
             LicenceHelperController()
+        })
+        .fullScreenCover(isPresented: $isPassport, onDismiss: {
+        }, content: {
+            PassportHelperController()
         })
     }
 }

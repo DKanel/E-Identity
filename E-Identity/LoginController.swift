@@ -76,6 +76,7 @@ struct LoginController: View {
                                         }else if loginResponse.registrationStatus == "verified"{
                                             isPresentingFailureLogin = false
                                             isPresentingSuccessLogin = true
+                                            UserDefaults.standard.setValue(loginResponse.loginToken, forKey: "LOGINTOKEN")
                                         }
                                     case .failure(let error):
                                         print("error:\(error)")

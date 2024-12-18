@@ -24,20 +24,18 @@
 		7D1A61122CDFAE5500F98A02 /* ChooseLoginTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1A61112CDFAE5400F98A02 /* ChooseLoginTypeController.swift */; };
 		7D207EBB2CE8DB2E00C159C3 /* GenericViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D207EBA2CE8DB2E00C159C3 /* GenericViewModel.swift */; };
 		7D207EBD2CE8E6C500C159C3 /* OutlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D207EBC2CE8E6C500C159C3 /* OutlinedTextField.swift */; };
+		7D27393B2D07419800DD57F8 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27393A2D07419800DD57F8 /* ScannerView.swift */; };
+		7D27393D2D0741B400DD57F8 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27393C2D0741B400DD57F8 /* ScannerViewController.swift */; };
 		7D47750B2CDA9A76009309C5 /* SelectValidationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47750A2CDA9A76009309C5 /* SelectValidationController.swift */; };
 		7DAC188B2CFB5C370038F983 /* LicenceHelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAC188A2CFB5C370038F983 /* LicenceHelperController.swift */; };
 		7DCA4A612CFA214500F715E7 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA4A602CFA214500F715E7 /* APIClient.swift */; };
-		7DCF0F9A2CFE3795002EE15F /* SwiftyTesseract in Frameworks */ = {isa = PBXBuildFile; productRef = 7DCF0F992CFE3795002EE15F /* SwiftyTesseract */; };
-		7DCF0F9C2CFE395A002EE15F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 7DCF0F9B2CFE395A002EE15F /* tessdata */; };
-		7DCF0F9E2CFE404F002EE15F /* CameraScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF0F9D2CFE404E002EE15F /* CameraScannerViewController.swift */; };
-		7DD373C52CFE166D0097CF39 /* CameraScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD373C42CFE166D0097CF39 /* CameraScannerView.swift */; };
-		7DD373C72CFE1E4D0097CF39 /* CameraHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD373C62CFE1E4D0097CF39 /* CameraHelper.swift */; };
 		7DDB6BA32CD6622000284642 /* MDCOutlinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB6BA22CD6622000284642 /* MDCOutlinedTextField.swift */; };
 		7DDB6BA52CD663CD00284642 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB6BA42CD663CD00284642 /* Strings.swift */; };
 		7DDB6BA72CD66B8800284642 /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB6BA62CD66B8800284642 /* KeyboardModifier.swift */; };
 		7DDB6BAA2CD66E0400284642 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDB6BA92CD66E0400284642 /* ButtonStyle.swift */; };
 		7DE3B7EF2CFA2992009DA836 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3B7EE2CFA2992009DA836 /* Models.swift */; };
 		7DE3B7F22CFA4292009DA836 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3B7F12CFA4292009DA836 /* Constants.swift */; };
+		7DF5E7602D0A093900D0EC87 /* PassportHelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5E75F2D0A093900D0EC87 /* PassportHelperController.swift */; };
 		ACD691939291F2E1E8CF450D /* Pods_E_Identity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8AC0BA520E0ADEBEBCCFD44 /* Pods_E_Identity.framework */; };
 		DC8923D04CC40F08A4A7983E /* Pods_E_IdentityTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7CD45D79030D0DF021905DD /* Pods_E_IdentityTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,19 +82,18 @@
 		7D1A61112CDFAE5400F98A02 /* ChooseLoginTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLoginTypeController.swift; sourceTree = "<group>"; };
 		7D207EBA2CE8DB2E00C159C3 /* GenericViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewModel.swift; sourceTree = "<group>"; };
 		7D207EBC2CE8E6C500C159C3 /* OutlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextField.swift; sourceTree = "<group>"; };
+		7D27393A2D07419800DD57F8 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		7D27393C2D0741B400DD57F8 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		7D47750A2CDA9A76009309C5 /* SelectValidationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectValidationController.swift; sourceTree = "<group>"; };
 		7DAC188A2CFB5C370038F983 /* LicenceHelperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenceHelperController.swift; sourceTree = "<group>"; };
 		7DCA4A602CFA214500F715E7 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		7DCF0F9B2CFE395A002EE15F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		7DCF0F9D2CFE404E002EE15F /* CameraScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerViewController.swift; sourceTree = "<group>"; };
-		7DD373C42CFE166D0097CF39 /* CameraScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraScannerView.swift; sourceTree = "<group>"; };
-		7DD373C62CFE1E4D0097CF39 /* CameraHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelper.swift; sourceTree = "<group>"; };
 		7DDB6BA22CD6622000284642 /* MDCOutlinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDCOutlinedTextField.swift; sourceTree = "<group>"; };
 		7DDB6BA42CD663CD00284642 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7DDB6BA62CD66B8800284642 /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 		7DDB6BA92CD66E0400284642 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		7DE3B7EE2CFA2992009DA836 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		7DE3B7F12CFA4292009DA836 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7DF5E75F2D0A093900D0EC87 /* PassportHelperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportHelperController.swift; sourceTree = "<group>"; };
 		9991DFC39BC797ADE0DE84B1 /* Pods-E-Identity-E-IdentityUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Identity-E-IdentityUITests.release.xcconfig"; path = "Target Support Files/Pods-E-Identity-E-IdentityUITests/Pods-E-Identity-E-IdentityUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A34EE2DC509ED17453052E6D /* Pods-E-Identity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Identity.debug.xcconfig"; path = "Target Support Files/Pods-E-Identity/Pods-E-Identity.debug.xcconfig"; sourceTree = "<group>"; };
 		C38A995F95D214915F9B3320 /* Pods_E_Identity_E_IdentityUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Identity_E_IdentityUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD691939291F2E1E8CF450D /* Pods_E_Identity.framework in Frameworks */,
-				7DCF0F9A2CFE3795002EE15F /* SwiftyTesseract in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +178,6 @@
 		7D0DEFB42CD6488A0076C81B /* E-Identity */ = {
 			isa = PBXGroup;
 			children = (
-				7DCF0F9B2CFE395A002EE15F /* tessdata */,
 				7DE3B7F02CFA4276009DA836 /* Constants */,
 				7DE3B7ED2CFA2985009DA836 /* Models */,
 				7DCA4A5F2CFA212800F715E7 /* Api */,
@@ -203,9 +198,9 @@
 				7D0DEFE52CD64B120076C81B /* Localizable.strings */,
 				7D0DEFBB2CD6488C0076C81B /* Preview Content */,
 				7DAC188A2CFB5C370038F983 /* LicenceHelperController.swift */,
-				7DD373C42CFE166D0097CF39 /* CameraScannerView.swift */,
-				7DD373C62CFE1E4D0097CF39 /* CameraHelper.swift */,
-				7DCF0F9D2CFE404E002EE15F /* CameraScannerViewController.swift */,
+				7D27393A2D07419800DD57F8 /* ScannerView.swift */,
+				7D27393C2D0741B400DD57F8 /* ScannerViewController.swift */,
+				7DF5E75F2D0A093900D0EC87 /* PassportHelperController.swift */,
 			);
 			path = "E-Identity";
 			sourceTree = "<group>";
@@ -313,7 +308,6 @@
 			);
 			name = "E-Identity";
 			packageProductDependencies = (
-				7DCF0F992CFE3795002EE15F /* SwiftyTesseract */,
 			);
 			productName = "E-Identity";
 			productReference = 7D0DEFB22CD6488A0076C81B /* E-Identity.app */;
@@ -392,7 +386,6 @@
 			);
 			mainGroup = 7D0DEFA92CD6488A0076C81B;
 			packageReferences = (
-				7DCF0F982CFE376D002EE15F /* XCRemoteSwiftPackageReference "SwiftyTesseract" */,
 			);
 			productRefGroup = 7D0DEFB32CD6488A0076C81B /* Products */;
 			projectDirPath = "";
@@ -411,7 +404,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D0DEFBD2CD6488C0076C81B /* Preview Assets.xcassets in Resources */,
-				7DCF0F9C2CFE395A002EE15F /* tessdata in Resources */,
 				7D0DEFE72CD64B120076C81B /* Localizable.strings in Resources */,
 				7D0DEFBA2CD6488C0076C81B /* Assets.xcassets in Resources */,
 			);
@@ -544,16 +536,16 @@
 				7D0DEFE02CD649690076C81B /* LoginRegisterController.swift in Sources */,
 				7DE3B7EF2CFA2992009DA836 /* Models.swift in Sources */,
 				7D1A61102CDF8F8600F98A02 /* LoginController.swift in Sources */,
-				7DD373C52CFE166D0097CF39 /* CameraScannerView.swift in Sources */,
 				7DDB6BA72CD66B8800284642 /* KeyboardModifier.swift in Sources */,
-				7DD373C72CFE1E4D0097CF39 /* CameraHelper.swift in Sources */,
 				7D207EBD2CE8E6C500C159C3 /* OutlinedTextField.swift in Sources */,
 				7D0DEFEB2CD64E7D0076C81B /* Colors.swift in Sources */,
 				7D0DEFB82CD6488A0076C81B /* ContentView.swift in Sources */,
+				7DF5E7602D0A093900D0EC87 /* PassportHelperController.swift in Sources */,
+				7D27393D2D0741B400DD57F8 /* ScannerViewController.swift in Sources */,
 				7D0DEFB62CD6488A0076C81B /* E_IdentityApp.swift in Sources */,
 				7D1A610E2CDF7D4400F98A02 /* CheckEmailController.swift in Sources */,
+				7D27393B2D07419800DD57F8 /* ScannerView.swift in Sources */,
 				7D1A61122CDFAE5500F98A02 /* ChooseLoginTypeController.swift in Sources */,
-				7DCF0F9E2CFE404F002EE15F /* CameraScannerViewController.swift in Sources */,
 				7DDB6BA32CD6622000284642 /* MDCOutlinedTextField.swift in Sources */,
 				7D207EBB2CE8DB2E00C159C3 /* GenericViewModel.swift in Sources */,
 				7DDB6BAA2CD66E0400284642 /* ButtonStyle.swift in Sources */,
@@ -920,25 +912,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7DCF0F982CFE376D002EE15F /* XCRemoteSwiftPackageReference "SwiftyTesseract" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyTesseract/SwiftyTesseract.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7DCF0F992CFE3795002EE15F /* SwiftyTesseract */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DCF0F982CFE376D002EE15F /* XCRemoteSwiftPackageReference "SwiftyTesseract" */;
-			productName = SwiftyTesseract;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D0DEFAA2CD6488A0076C81B /* Project object */;
 }

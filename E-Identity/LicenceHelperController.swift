@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-import SwiftyTesseract
 
 struct LicenceHelperController: View {
     @State var isDriverPresenting = false
-    @State private var recognizedText = ""
+    @State private var recognizedName: String = ""
+        @State private var recognizedSurname: String = ""
+        @State private var isScannerPresented = false
         
-    let tesseract = Tesseract(languages: [.greekModern, .english])
     var body: some View {
         ZStack{
             Color.mainBackgroundColor
@@ -50,7 +50,7 @@ struct LicenceHelperController: View {
         .ignoresSafeArea()
         .fullScreenCover(isPresented: $isDriverPresenting, onDismiss: {
         }, content: {
-            CameraScannerView(scannedText: $recognizedText)
+            ScannerView(onRecognizedText: processRecognizedText)
         })
         .onAppear(){
             // Forcing the rotation to portrait
@@ -61,6 +61,40 @@ struct LicenceHelperController: View {
             }
         }
     }
+    func processRecognizedText(_ text: String) {
+            parseDriverLicenseText(text)
+        }
+
+        func parseDriverLicenseText(_ text: String) {
+            let lines = text.split(separator: "\n").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            print("Parsed Lines: \(lines)")
+
+            for i in 0..<lines.count {
+                    if lines[i].hasPrefix("1.") { // Name line
+                        let components = lines[i + 1].split(separator: " ")
+                        if let latinName = components.last { // Latin name is usually last in this line
+                            recognizedSurname = String(latinName)
+                        }else{
+                            recognizedSurname = ""
+                        }
+                    }
+                    
+                    if lines[i].hasPrefix("2.") { // Surname line
+                        let components = lines[i + 1].split(separator: " ")
+                        if let latinSurname = components.last { // Latin surname is usually last in this line
+                            recognizedName = String(latinSurname)
+                        }else{
+                            recognizedName = ""
+                        }
+                    }
+                    print("Name: \(recognizedName) and Surname: \(recognizedSurname)")
+                if recognizedName != "" && recognizedSurname != ""{
+                    let loginToken = UserDefaults.standard.value(forKey: "LOGINTOKEN") as! String
+                    let api = APIClient()
+                    api.postLicenseRequest(name: recognizedName, surname: recognizedSurname, loginToken: loginToken, token: Constants().token)
+                }
+                }
+        }
 }
 
 #Preview {
